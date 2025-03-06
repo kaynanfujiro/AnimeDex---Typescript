@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# Buscador de Animes com MyAnimeList API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de busca de animes desenvolvido utilizando a API do MyAnimeList (MAL). O objetivo principal da aplicação é permitir que os usuários busquem informações sobre animes, como sinopse, classificações, episódios, entre outros, diretamente através da interface do aplicativo.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Back-End**: Node.js com Express
+- **Front-End**: React, Vite, TypeScript
+- **Estilização**: Tailwind CSS
+- **API**: MyAnimeList (MAL)
+- **Gerenciamento de Requisições**: Arquitetura API -> Back-End -> Front-End para contornar limitação de CORS.
 
-## Expanding the ESLint configuration
+## 💡 Sobre o Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O principal desafio desse projeto foi superar a limitação do CORS (Cross-Origin Resource Sharing), já que a API do MyAnimeList não permite requisições diretas do Front-End. Para isso, foi implementada uma arquitetura onde o Back-End (Node.js + Express) gerencia as requisições à API do MyAnimeList e transmite os dados para o Front-End. Isso garantiu que o processo de busca e exibição de dados fosse feito de maneira eficiente e segura.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🔧 Como Funciona
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. O usuário realiza uma busca de animes no Front-End (React + Vite).
+2. O Front-End faz uma requisição para o Back-End.
+3. O Back-End comunica-se com a API do MyAnimeList (MAL), obtendo as informações desejadas.
+4. O Back-End envia os dados para o Front-End, que os exibe de forma organizada e estilizada.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+A aplicação foi construída com foco em performance, escalabilidade e experiência do usuário, utilizando as melhores práticas e ferramentas modernas.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📝 Aprendizados
+
+- **CORS**: Ao lidar com a limitação de requisições diretas ao Front-End, foi possível entender profundamente como funciona o controle de segurança entre diferentes origens de requisições.
+- **Node.js e Express**: Aperfeiçoei meus conhecimentos sobre desenvolvimento de APIs e comunicação entre o Front-End e o Back-End.
+- **React e Vite**: Trabalhei com a criação de uma interface dinâmica e otimizada para uma melhor experiência do usuário.
+- **Tailwind CSS**: Utilizei o framework para estilizar o layout de maneira rápida e flexível.
+
+## 💻 Links
+
+- **GitHub**: [https://github.com/kaynanfujiro]
+- **Portfólio**: [https://portifolio-theta-black.vercel.app]
+
+## 🛠 Passo a Passo para Rodar o Projeto
+
+### Pré-requisitos
+
+- Node.js (recomendado versão 16 ou superior)
+- npm (gerenciador de pacotes do Node.js)
+- Git (para clonar o repositório)
+
+### 1. Clonar o Repositório
+
+Clone o repositório para sua máquina local:
+
+```bash
+git clone https://github.com/kaynanfujiro/AnimeDex---Typescript.git
+
+
+Desenvolvido por Kaynan Santos.
