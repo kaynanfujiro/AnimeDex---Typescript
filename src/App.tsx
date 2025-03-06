@@ -1,18 +1,16 @@
-import { useState } from 'react'
 import './App.css'
+import AnimeList from './Components/AnimeList'
+import { Layout } from './Components/Layout'
 
 function App() {
-  const [name, setName] = useState('Kaynan')
-  
-  const handleSubmit = () =>{
-    setName('Kaynan Santos')
-  }
 
   return (
     <>
-      <h1>{name}</h1>
-      <button onClick={handleSubmit}>TESTE</button>
+      <Layout>
+        <AnimeList/>
+      </Layout>
     </>
+    
   )
 }
 
